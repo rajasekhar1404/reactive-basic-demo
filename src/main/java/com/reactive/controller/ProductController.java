@@ -20,8 +20,12 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Mono<Product> getProduct(@PathVariable String id) {
-        String password = "Testing123";
-        System.out.println("testing for security issues: " + password);
+        String username = "productUser";
+        String password = "ProductionPasword";
+        String aws_secret_key = "ProductionPassword123";
+        if (aws_secret_key.equals("ProductionPassword123") {
+            System.out.println("Production password: " + aws_secret_key);            
+        }
         return productService.getProductById(id);
     }
 
