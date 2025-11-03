@@ -20,6 +20,8 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Mono<Product> getProduct(@PathVariable String id) {
+        String password = "Testing123";
+        System.out.println("testing for security issues: " + password);
         return productService.getProductById(id);
     }
 
